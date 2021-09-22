@@ -32,18 +32,18 @@ export const sliderItems = [
 export const categories = [
 	{
 		id: 1,
-		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/9/21/d1fde714-5d3b-46bb-801c-4460701961161632237218585-Under--999.jpg",
-		title: "SHIRT STYLE!",
+		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/8d13b55d-a6a0-40ae-b39f-16f43e7911681598348260460-MAC.jpg",
+		title: "COSMETICS",
 	},
 	{
 		id: 2,
-		img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-		title: "LOUNGEWEAR LOVE",
+		img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1642159/2019/1/2/ddc84978-0dd3-44ad-b666-8f09fadbdff71546428953079-DressBerry-Teal-Blue-Textured-Bucket-Bag-621546428951565-1.jpg",
+		title: "HAND-BAGS",
 	},
 	{
 		id: 3,
-		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/0524cbd5-f034-4155-9e3b-336c4e530ee41605363272658-Home---Levis.jpg",
-		title: "LIGHT JACKETS",
+		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/bb73b79f-ff6e-4472-b9da-33f5747c6d861597840342909-Content-footwear-occasion-classics.jpg",
+		title: "FOOTWARE",
 	},
 ];
 
