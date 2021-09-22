@@ -2,7 +2,7 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile ,tablet} from "../responsive";
+import { mobile, tablet } from "../responsive";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -38,7 +38,7 @@ const SearchContainer = styled.div`
 	align-items: center;
 	margin-left: 25px;
 	padding: 5px;
-	${tablet({marginLeft:"20px"})}
+	${tablet({ marginLeft: "20px" })}
 	${mobile({ display: "none" })}
 `;
 
