@@ -30,6 +30,7 @@ const Arrow = styled.div`
 	right: ${(props) => props.direction === "right" && "10px"};
 	margin: auto;
 	cursor: pointer;
+	color: black;
 	opacity: 0.5;
 	z-index: 2;
 `;

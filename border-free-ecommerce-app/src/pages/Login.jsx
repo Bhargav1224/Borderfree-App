@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import "../components/Navbar.css";
 
 const Container = styled.div`
-	width: 100vw;
+	width: 98.5vw;
 	height: 100vh;
 	background: linear-gradient(
 			rgba(255, 255, 255, 0.5),
@@ -50,12 +52,12 @@ const Button = styled.button`
 	margin-bottom: 10px;
 `;
 
-const Link = styled.a`
-	margin: 5px 0px;
-	font-size: 12px;
-	text-decoration: underline;
-	cursor: pointer;
-`;
+// const Link = styled.a`
+// 	margin: 5px 0px;
+// 	font-size: 12px;
+// 	text-decoration: underline;
+// 	cursor: pointer;
+// `;
 
 const Login = () => {
 	return (
@@ -66,8 +68,12 @@ const Login = () => {
 					<Input placeholder="username" />
 					<Input placeholder="password" />
 					<Button>LOGIN</Button>
-					<Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-					<Link>CREATE A NEW ACCOUNT</Link>
+					<Link className="login" to="forgot-psd">
+						DO NOT YOU REMEMBER THE PASSWORD?
+					</Link>
+					<Link className="register" to="/register">
+						CREATE A NEW ACCOUNT
+					</Link>
 				</Form>
 			</Wrapper>
 		</Container>
