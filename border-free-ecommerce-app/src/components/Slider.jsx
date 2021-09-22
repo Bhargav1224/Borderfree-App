@@ -1,8 +1,10 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
+
+const len = sliderItems.length - 1;
 
 const Container = styled.div`
 	width: 100%;
@@ -36,7 +38,8 @@ const Wrapper = styled.div`
 	height: 100%;
 	display: flex;
 	transition: all 1.5s ease;
-	transform: translateX(${(props) => props.slideIndex * -100}vw);
+	cursor: pointer;
+	transform: translateX(${(props) => props.activeIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -80,21 +83,30 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-	const [slideIndex, setSlideIndex] = useState(0);
-	const handleClick = (direction) => {
-		if (direction === "left") {
-			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 3);
-		} else {
-			setSlideIndex(slideIndex < 3 ? slideIndex + 1 : 0);
-		}
-	};
+	const [activeIndex, setActiveIndex] = useState(0);
+
+	useEffect(() => {
+		//every 5sec the images are moved one after another
+		var interval = setInterval(() => {
+			setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
+		}, 5000);
+
+		//unmounting phase
+		return () => {
+			clearInterval(interval);
+		};
+		// eslint-disable-next-line
+	}, [activeIndex]);
 
 	return (
 		<Container>
-			<Arrow direction="left" onClick={() => handleClick("left")}>
+			<Arrow
+				direction="left"
+				onClick={() => setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)}
+			>
 				<ArrowLeftOutlined />
 			</Arrow>
-			<Wrapper slideIndex={slideIndex}>
+			<Wrapper activeIndex={activeIndex}>
 				{sliderItems?.map((item) => (
 					<Slide bg={item.bg} key={item.id}>
 						<ImgContainer>
@@ -103,12 +115,17 @@ const Slider = () => {
 						<InfoContainer>
 							<Title>{item.title}</Title>
 							<Desc>{item.desc}</Desc>
-							<Button>SHOW NOW</Button>
+							<Button>SHOP NOW</Button>
 						</InfoContainer>
 					</Slide>
 				))}
 			</Wrapper>
-			<Arrow direction="right" onClick={() => handleClick("right")}>
+			<Arrow
+				direction="right"
+				onClick={() =>
+					setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
+				}
+			>
 				<ArrowRightOutlined />
 			</Arrow>
 		</Container>
