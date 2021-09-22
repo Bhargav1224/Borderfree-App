@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import { PagenotFound } from "../components/PagenotFound";
 
 export const Routes = () => {
 	return (
@@ -13,6 +14,7 @@ export const Routes = () => {
 				<Route exact path="/">
 					<Home />
 				</Route>
+
 				<Route exact path="/register">
 					<Register />
 				</Route>
@@ -20,7 +22,7 @@ export const Routes = () => {
 					<Login />
 				</Route>
 				<Route>
-					<h2>Page not found</h2>
+					<PagenotFound/>
 				</Route>
 			</Switch>
 		</Router>
