@@ -50,7 +50,7 @@ export const categories = [
 export const popularProducts = [
 	{
 		id: 1,
-		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/49dd1ce9-d627-4c6e-b544-4be7e1f24a091597840342867-Content-footwear-essentials-flipflops.jpg",
+		img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
 	},
 	{
 		id: 2,
@@ -78,6 +78,6 @@ export const popularProducts = [
 	},
 	{
 		id: 8,
-		img: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/2bcf907c-bc21-44cb-9021-7575a963b0ef1595934830671-Content-Accesories-Unisex-True-wirless-lets-get-free.jpg",
+		img: "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
 	},
 ];
