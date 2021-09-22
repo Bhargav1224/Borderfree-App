@@ -8,6 +8,7 @@ import "./Navbar.css";
 
 const Container = styled.div`
 	height: 60px;
+	position: sticky;
 	${mobile({ height: "50px" })}
 `;
 
@@ -37,7 +38,7 @@ const SearchContainer = styled.div`
 	align-items: center;
 	margin-left: 25px;
 	padding: 5px;
-  ${mobile({ display: "none" })}
+	${mobile({ display: "none" })}
 `;
 
 const Input = styled.input`
@@ -50,7 +51,6 @@ const Center = styled.div`
 	flex: 1;
 	text-align: center;
 `;
-
 
 const Right = styled.div`
 	flex: 1;
@@ -92,7 +92,7 @@ const Navbar = () => {
 						SIGN IN
 					</Link>
 					<MenuItem>
-						<Badge badgeContent={4} color="primary">
+						<Badge badgeContent={5} color="secondary">
 							<ShoppingCartOutlined />
 						</Badge>
 					</MenuItem>
