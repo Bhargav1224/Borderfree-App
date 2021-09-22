@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
+import { Dots } from "./Dots";
 
 const len = sliderItems.length - 1;
 
@@ -12,7 +13,7 @@ const Container = styled.div`
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	${mobile({ display: "none" })}
+	${mobile({ width: "100%", height: "100vh" })}
 `;
 
 const Arrow = styled.div`
@@ -121,6 +122,11 @@ const Slider = () => {
 					</Slide>
 				))}
 			</Wrapper>
+			<Dots
+				activeIndex={activeIndex}
+				sliderImages={sliderItems}
+				onclick={(activeIndex) => setActiveIndex(activeIndex)}
+			/>
 			<Arrow
 				direction="right"
 				onClick={() =>

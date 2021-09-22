@@ -55,3 +55,45 @@
 .register {
 	color: orangered;
 }
+
+/* -----------Dots styles--------- */
+
+.all-dots {
+	width: 50%;
+	height: 70px;
+	position: absolute;
+	display: flex;
+	top: 86%;
+	justify-content: center;
+	z-index: 200;
+	margin-left: 350px;
+	/* border: 1px solid red; */
+}
+@media (max-width: 1024px) {
+	.all-dots {
+		top: 85%;
+		margin-left: 170px;
+	}
+}
+@media (max-width: 645px) {
+	.all-dots {
+		top: 70%;
+		margin-left: 85px;
+	}
+}
+
+.dot {
+	cursor: pointer;
+	height: 1rem;
+	width: 1rem;
+	margin-top: 50px;
+	margin: 50px 5px;
+	background-color: gray;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.active-dot,
+.dot:hover {
+	background-color: rgb(32, 148, 163);
+}
