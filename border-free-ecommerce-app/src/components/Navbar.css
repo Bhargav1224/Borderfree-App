@@ -20,7 +20,6 @@
 	margin-left: 25px;
 	text-decoration: none;
 	color: black;
-
 }
 @media (max-width: 380px) {
 	.menuitem1 {
@@ -41,4 +40,18 @@
 	.menuitem2 {
 		font-size: 12px;
 	}
+}
+
+/* --------Login styles---------- */
+.login,
+.register {
+	margin: 5px 0px;
+	text-decoration: underline;
+	cursor: pointer;
+	color: blue;
+	font-size: 10px;
+}
+
+.register {
+	color: orangered;
 }
