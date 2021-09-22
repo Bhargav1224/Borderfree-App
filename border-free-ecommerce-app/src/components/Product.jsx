@@ -60,7 +60,7 @@ import {
     margin: 10px;
     transition: all 0.5s ease;
     &:hover {
-      background-color: #e9f5f5;
+      background-color: #db1a3a;
       transform: scale(1.1);
     }
   `;
